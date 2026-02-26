@@ -9,6 +9,7 @@ import userRouter from "./routes/userRoutes.js";
 import productRouter from "./routes/productRoutes.js";
 import cartRoutes from "./routes/cartRoutes.js";
 import wishlistRoutes from "./routes/wishlistRoutes.js";
+import contactRoutes from "./routes/contactRoutes.js";
 
 const app = express();
 const port = process.env.PORT || 4000;
@@ -28,5 +29,6 @@ app.use("/api/user", userRouter);
 app.use("/api/products", productRouter);
 app.use("/api/cart", cartRoutes);
 app.use("/api/wishlist", wishlistRoutes);
+app.use("/api/contact", contactRoutes);
 
 app.listen(port, () => console.log("Server Started"));
